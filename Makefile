@@ -1,8 +1,8 @@
 build: 
-	docker build --tag "7daysserver:latest" .
+	docker build --tag "7daysserver-df:latest" .
 
 run:
-	docker run -itd --name "7days-docker" -p 26900-26902:26900-26902/udp -p 18500:8080 7daysserver:latest
+	docker run -itd --name "7days-docker" -p 26900-26902:26900-26902/udp -p 18500:8080 7daysserver-df:latest
 
 start:
 	docker start 7days-docker

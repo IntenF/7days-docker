@@ -1,3 +1,32 @@
+# 追記<使い方>
+
+ ## serverconfig.xmlの編集
+
+以下のproperty nameのvalueを編集
+ - SeveerName: 自分のサーバの名前
+ - ServerPassword: 自分のサーバのパスワード
+ - <Option>Region: Japanese 
+ - ControlPanelPassword: コントロールパネルのパスワード
+
+ ## ポートの編集
+
+ Makefile内のポートフォアディングを編集。この部分
+ - 26900がゲームのポート
+
+ ``` bash
+ docker run -itd --name "7days-docker" -p 26900-26902:26900-26902/udp -p 18500:8080 7daysserver-df:latest
+ ```
+
+## サーバ立ち上げ手順
+
+1. make build
+2. make run
+3. (終了時) make stop
+4. (再開時) make start
+
+
+以下元ソースgitのREADME.md
+
 # 7 Days to Die Dedicated Server using Docker
 
 ## Description
